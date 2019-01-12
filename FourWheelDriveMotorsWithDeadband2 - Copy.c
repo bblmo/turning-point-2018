@@ -1,9 +1,9 @@
 #pragma config(Motor,  port1,           rightForwardMotor, tmotorVex393_HBridge, openLoop, reversed)
 #pragma config(Motor,  port2,           frontSideMotor, tmotorServoContinuousRotation, openLoop)
 #pragma config(Motor,  port3,           armMotor,      tmotorServoContinuousRotation, openLoop, reversed)
-#pragma config(Motor,  port4,           gunMotor,      tmotorServoContinuousRotation, openLoop)
-#pragma config(Motor,  port5,           clawMotor,     tmotorServoContinuousRotation, openLoop)
-#pragma config(Motor,  port6,           rubberGearMotor, tmotorServoContinuousRotation, openLoop)
+#pragma config(Motor,  port4,           clawMotor,     tmotorServoContinuousRotation, openLoop)
+#pragma config(Motor,  port5,           gunMotor,      tmotorServoContinuousRotation, openLoop)
+#pragma config(Motor,  port6,            ,             tmotorServoContinuousRotation, openLoop)
 #pragma config(Motor,  port7,           miniWheelMotor, tmotorServoContinuousRotation, openLoop, reversed)
 #pragma config(Motor,  port8,           lowerPlatformMotors, tmotorServoContinuousRotation, openLoop, reversed)
 #pragma config(Motor,  port9,           rearSideMotor, tmotorServoContinuousRotation, openLoop, reversed)
@@ -116,8 +116,8 @@ task main()
     }
 
     // Add Code to shoot gun
-    // if 8R is pressed then draw back trigger
-    if(vexRT[Btn8R]==1)
+    // if 7r is pressed then draw back trigger
+    if(vexRT[Btn7R]==1)
     {
   		motor[gunMotor]=-127;
 		}
@@ -157,22 +157,6 @@ task main()
 		else
 		{
 			motor[miniWheelMotor]=0;
-		}
-
-		//if pressing 7L spin gear
-		if(vexRT[Btn7L]==1)
-		{
-			motor[rubberGearMotor]=127;
-		}
-		//if pressing 7R spin gear
-		else if(vexRT[Btn7R]==1)
-		{
-			motor[rubberGearMotor]=-127;
-		}
-		//if no pressing 7L or 7R stop
-		else
-	  {
-			motor[rubberGearMotor]=0;
 		}
 	}// end of while loop;
 }// end of program
