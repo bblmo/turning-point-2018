@@ -66,12 +66,13 @@ void pre_auton()
 
 task autonomous()
 {
-  // ..........................................................................
-  // Insert user code here.
-  // ..........................................................................
-
-  // Remove this function call once you have "real" code.
-  AutonomousCodePlaceholderForTesting();
+	//make the robot flip the flag with the assumption that were staring closer
+  // to the flag
+  // we are gonna go 47 inchs to the flag
+//we are going to move the robot 4263 millaseconds
+ motor[rightForwardMotor]=127;
+ motor[leftForwardMotor]=127;
+ wait1Msec(4263);
 }
 
 /*---------------------------------------------------------------------------*/
