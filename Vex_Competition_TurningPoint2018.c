@@ -92,7 +92,7 @@ task usercontrol()
     //Left Joystick Y-axis controls Left Forward Motor
   	if(abs(vexRT[Ch3]) > DEADBAND) // If the left joystick is greater than or less than the threshold:
 		{
-			motor[leftForwardMotor] = (vexRT[Ch3])/2; // Left Joystick Y value / 2.
+			motor[leftForwardMotor] = (vexRT[Ch3]); // Left Joystick Y value / 2.
 		}
 		else // If the left joystick is within the threshold:
 		{
@@ -102,7 +102,7 @@ task usercontrol()
     //Right Joystick Y-axis controls Right Forward Motor
   	if(abs(vexRT[Ch2]) > DEADBAND) // If the Right joystick is greater than or less than the threshold:
 		{
-			motor[rightForwardMotor] = (vexRT[Ch2])/2; // Right Joystick Y value / 2.
+			motor[rightForwardMotor] = (vexRT[Ch2]); // Right Joystick Y value / 2.
 		}
 		else // If the Right joystick is within the threshold:
 		{
@@ -112,7 +112,7 @@ task usercontrol()
 	  //Right Joystick X-axis controls Right Forward Motor
   	if(abs(vexRT[Ch1]) > DEADBAND) // If the Right joystick is greater than or less than the threshold:
 		{
-			motor[frontSideMotor] = (vexRT[Ch1])/2; // Right Joystick Y value / 2.
+			motor[frontSideMotor] = (vexRT[Ch1]); // Right Joystick Y value / 2.
 		}
 		else // If the Right joystick is within the threshold:
 		{
@@ -122,7 +122,7 @@ task usercontrol()
 	  //Right Joystick X-axis controls Right Forward Motor
   	if(abs(vexRT[Ch4]) > DEADBAND) // If the Right joystick is greater than or less than the threshold:
 		{
-			motor[rearSideMotor] = (vexRT[Ch4])/2; // Right Joystick Y value / 2.
+			motor[rearSideMotor] = (vexRT[Ch4]); // Right Joystick Y value / 2.
 		}
 		else // If the Right joystick is within the threshold:
 		{
