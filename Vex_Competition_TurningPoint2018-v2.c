@@ -72,7 +72,14 @@ task autonomous()
  motor[leftRearMotor]=127;
  motor[rightFrontMotor]=127;
  motor[rightRearMotor]=127;
+
  wait1Msec(4263);
+
+ motor[leftFrontMotor]=0;
+ motor[leftRearMotor]=0;
+ motor[rightFrontMotor]=0;
+ motor[rightRearMotor]=0;
+
 }
 
 /*---------------------------------------------------------------------------*/
